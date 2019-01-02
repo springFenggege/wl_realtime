@@ -5,10 +5,10 @@ import datetime
 import pymysql
 from requests.cookies import RequestsCookieJar
 
-db=pymysql.connect("118.31.250.17",  #Host
-                           "root",        #数据库账号
-                           "vortex2016",     #s数据库密码
-                           "wl1" ,  # 数据库名称
+db=pymysql.connect("*******",  #Host
+                           "****",        #数据库账号
+                           "*****",     #s数据库密码
+                           "*****" ,  # 数据库名称
                            charset='utf8'
                            )
 cursor=db.cursor()                  # 使用cursor（）方法创建一个游标对象
@@ -41,7 +41,7 @@ for i in data:
     a[key]=value
     data_list.update(a)
 
-url='http://api.envcloud.com.cn:9011/sds/deviceFactorData/getHistoryDataRaw'
+url='http://***.envcloud.com.cn:9011/sds/deviceFactorData/getHistoryDataRaw'
 parm={
         'startDatetime':1541606400000,
         'factorCodes':3000525,
@@ -120,7 +120,7 @@ for i in range(0,24):
 # print(ci)
 
 
-wl_url='http://118.31.250.17:7610/wl/overview/hourlyReportData/selectAllTwo'
+wl_url='http://***.31.250.17:7610/wl/overview/hourlyReportData/selectAllTwo'
 wl_pram={
     'startTime':'1546272000000',
     'deviceId':'103'
